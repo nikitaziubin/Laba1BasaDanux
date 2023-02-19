@@ -33,7 +33,6 @@ internal class Program
     }
     public static void FindMatch(int id, Matches matches, Stadium[] stadiums )
     {
-        string josnFile = File.ReadAllText(Mpath);
         foreach (var matche in matches.matchesList)
         {
             if (id == matche.id)
@@ -57,11 +56,25 @@ internal class Program
         }
         
     }
-    public static void Get_s(int id)
+    public static void DelleteMach(int id, Matches matches)
     {
-        
+        matches.matchesList.RemoveAt(id);
+        var json = JsonSerializer.Serialize(matches, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+        File.WriteAllText(Mpath, json);
     }
+    public static void UpdateMatches(int id, Matches matches)
+    {
+        foreach (var matche in matches.matchesList)
+        {
+            if (id == matche.id)
+            {
 
+            }
+        }
+    }
     private static void Main(string[] args)
     {
         var jsonConect = File.ReadAllText(Spath);
@@ -73,7 +86,8 @@ internal class Program
         //Console.WriteLine(stadiums[0]);
         while (true)
         {
-            Console.WriteLine($"(0) Exit \n(1) Add match");
+            Console.WriteLine($"(0) Exit \n(1) Add match\n(2) Add Match\n(3) Dellete Match" +
+                $"\n (4) Update Matches");
             int cumNum = Convert.ToInt32(Console.ReadLine());
             if (cumNum == 0)
             {
@@ -88,7 +102,16 @@ internal class Program
                 Console.Write("Warite id: ");
                 int id = Convert.ToInt32(Console.ReadLine());
                 FindMatch(id, matches, stadiums);
-                
+            }
+            else if (cumNum == 3)
+            {
+                Console.Write("Warite id: ");
+                int id = Convert.ToInt32(Console.ReadLine());
+                DelleteMach(id-1, matches);
+            }
+            else if (cumNum == 4)
+            {
+
             }
 
         }
