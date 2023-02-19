@@ -45,7 +45,7 @@ internal class Program
                 {
                     if (stadium.id == matche.stadiumID)
                     {
-                        Console.WriteLine($"\nadress: {stadium.adress}\n" +
+                        Console.WriteLine($"adress: {stadium.adress}\n" +
                             $"name: {stadium.name}\n" +
                             $"capacity: {stadium.capacity}\n" +
                             $"max_capacity: {stadium.max_capacity}\n");
@@ -211,8 +211,8 @@ internal class Program
         //Console.WriteLine(stadiums[0]);
         while (true)
         {
-            Console.WriteLine($"(0) Exit \n(1) Add Match\n(2) Get match\n(3) Dellete Match" +
-                $"\n(4) Update Matches\n(5) Add Stadium\n(6) Get Stadium\n (7) Dellete Stadium\n(8) Update Stadium");
+            Console.WriteLine($"(0) Exit \n(1) Add Match\n(2) Get match\n(3) Delete Match" +
+                $"\n(4) Update Matches\n(5) Add Stadium\n(6) Get Stadium\n(7) Delete Stadium\n(8) Update Stadium");
             int cumNum = Convert.ToInt32(Console.ReadLine());
             if (cumNum == 0)
             {
@@ -224,19 +224,19 @@ internal class Program
             }
             else if (cumNum == 2)
             {
-                Console.Write("Warite id: ");
+                Console.Write("Enter id: ");
                 int id = Convert.ToInt32(Console.ReadLine());
                 FindMatch(id, matches, stadiums);
             }
             else if (cumNum == 3)
             {
-                Console.Write("Warite id: ");
+                Console.Write("Enter id: ");
                 int id = Convert.ToInt32(Console.ReadLine());
                 DelleteMach(id-1, matches);
             }
             else if (cumNum == 4)
             {
-                Console.Write("Warite id: ");
+                Console.Write("Enter id: ");
                 int id = Convert.ToInt32(Console.ReadLine());
                 UpdateMatches(id, matches);
             }
@@ -246,19 +246,19 @@ internal class Program
             }
             else if (cumNum == 6)
             {
-                Console.Write("Warite id: ");
+                Console.Write("Enter id: ");
                 int id = Convert.ToInt32(Console.ReadLine());
                 FindStadium(id, stadiums);
             }
             else if (cumNum == 7)
             {
-                Console.Write("Warite id: ");
+                Console.Write("Enter id: ");
                 int id = Convert.ToInt32(Console.ReadLine());
                 DelleteStadium(id - 1, stadiums);
             }
             else if (cumNum == 8)
             {
-                Console.Write("Warite id: ");
+                Console.Write("Enter id: ");
                 int id = Convert.ToInt32(Console.ReadLine());
                 UpdateStadium(id, stadiums);
             }
