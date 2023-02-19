@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "adress": "Torino",
+      "name": "Allianz Stadium",
+      "capacity": 41254,
+      "max_capacity": 45000
+    },
+    {
+      "id": 2,
+      "adress": "Liverpool",
+      "name": "Anfield",
+      "capacity": 54074,
+      "max_capacity": 56000
+    }
+  ]

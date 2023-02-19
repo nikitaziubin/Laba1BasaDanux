@@ -1,0 +1,12 @@
+{
+  "matchesList": [
+    {
+      "id": 1,
+      "homeTeamGoals": 1,
+      "visitorTeamGoals": 2,
+      "division": 2,
+      "date": "12",
+      "stadiumID": 2
+    }
+  ]
+}
